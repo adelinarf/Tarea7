@@ -81,9 +81,11 @@ def find_substrings(txt):
 			subcadenas.append(subcadenas[-1]+x)
 		else:
 			subcadenas.append(x)
-	'''Como se quiere la subcadena que sea prefijo
-	entonces se consideran las subcadenas desde 0 a n unicamente,
-	si la subcadena no incluye el elemento 0 no seria prefija'''
+	'''
+ 	To find the prefix substring then we consider the substrings 
+  	between 0 and n, if the substring doesn't include the 0 element
+   	it will not be a prefix substring.
+    	'''
 	p_s = []
 	for x in set(subcadenas): #O(1)
 		p = pattern_search(x,txt) #O(n)
