@@ -136,13 +136,14 @@ def convexHull(points, n):
 
 # Driver Code
 
+# Runs the convex hull function over a set of points
 def run(input_points):
 	points = []
 	for point in input_points:
 		points.append(Point(point[0], point[1]))
 	n = len(points)
 	return convexHull(points, n)
-
+# Saves an image given a c title and a form with the points
 def saveImage(c,form):
 	xpoints = np.array(form[0]+[form[0][0]])
 	ypoints = np.array(form[1]+[form[1][0]])
@@ -152,7 +153,7 @@ def saveImage(c,form):
 	plt.title("P'="+str(c))
 	plt.savefig('images/'+"P'="+str(c)+'.png')
 	plt.clf()
-
+# Gets the layers given a list of points 
 def getLayers(input_points):
 	setOf = input_points
 	layersFound = []
