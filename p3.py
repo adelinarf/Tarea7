@@ -1,4 +1,7 @@
 def KMPSearch(pat, txt):
+	'''
+ 	KMPSearch finds a pattern (pat) within large texts (txt).
+ 	'''
 	M = len(pat)
 	N = len(txt)
 
@@ -33,7 +36,7 @@ def KMPSearch(pat, txt):
 	return found
 
 
-# Function to compute LPS array
+# computeLPSArray is used to compute the LPS array
 def computeLPSArray(pat, M, lps):
 	len = 0 # length of the previous longest prefix suffix
 
@@ -57,7 +60,7 @@ def computeLPSArray(pat, M, lps):
 			else:
 				lps[i] = 0
 				i += 1
-
+#pattern_search searches the pattern over a string of text
 def pattern_search(pat,txt):
 	a = KMPSearch(pat, txt)  #O(2n) en el peor caso
 	if len(a)!=2:
@@ -69,6 +72,9 @@ def pattern_search(pat,txt):
 
 
 def find_substrings(txt):
+	'''
+ 	find_substrings find the substrings inside a given string of text
+ 	'''
 	subcadenas = []
 	for x in txt:
 		if len(subcadenas)!=0:
